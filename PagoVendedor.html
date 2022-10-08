@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sueldo</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script>
+        //Creamos las variables
+        let nombre;
+        let ventas;
+
+        //inicializamos la variable de sueldo base
+        let sueldoBase = 2500;
+
+        //Solicitamos los datos
+        nombre = prompt("Ingresa tu nombre");
+        ventas = parseInt(prompt("Ingresa el total de efectivo de tus ventas: "));
+
+        //Procedemos hacer los calculos
+        if(ventas >= 2000)
+        {
+            var comision = ventas * .20
+            var total = sueldoBase + comision
+        }
+        else{
+            comision = ventas * .10
+            total = sueldoBase + comision
+        }
+
+        //Mostramos en pantalla
+        document.write(nombre + " tú sueldo base es de: $" + sueldoBase + '</br>');
+        document.write("El total de efectivo de tus ventas es: $" + ventas + '</br>');
+        document.write("El total a pagar será de: $" + total)
+    </script>
+</body>
+</html>

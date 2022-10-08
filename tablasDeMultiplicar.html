@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset='utf-8'>
+    <title>Tablas de Multiplicar</title>
+
+</head>
+<body>
+    
+    <script>
+
+        //Declaramos las variables
+        let limitInf
+        let limitSupe
+
+        //Solicitamos los datos
+        limitInf = parseInt(prompt("Ingrese el límite inferior: "))
+        limitSupe = parseInt(prompt("Ingrese el límite superior: "))
+
+        //Ciclo for
+        for(limitInf; limitInf <= limitSupe; limitInf++)
+        {
+            for(let i = 1; i <= 10; i++)
+            {
+                document.write(i + "*" + limitInf + " = " + (i*limitInf) + '</br>')
+            }
+            document.write('</br>')
+            document.write('</br>')
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IMC</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script>
+    //Creamos las variables
+    let nombre;
+    let edad;
+    let altura;
+    let peso;
+
+    //Solicitamos los Datos
+    nombre = prompt("Ingresa tu nombre");
+    edad = prompt("Ingresa tu edad");
+    altura = parseFloat(prompt("Ingresa tu altura en metros"));
+    peso = parseFloat(prompt("Ingresa tu peso en kg"));
+
+    //Calculamos el IMC
+    var imc = peso / (altura)**2
+
+    //Mostramos en pantalla
+    document.write("Estimad@ " + nombre + " de " + edad + " años " + '</br>');
+    document.write("Su Indice de Masa Corporal es de: " + imc + '</br>');
+
+    //condicionales
+    if (imc > 25){
+        document.write("Se encuentra en un Peso Alto, haga dieta y ejercicio"+'</br>');
+    }else if (imc < 25 && imc > 22){
+        document.write("Se encuentra en el Peso correcto"+'</br>');
+    }else{
+        document.write("Se encuentra en un Peso Bajo, coma más"+'</br>');
+    }
+
+    </script>
+</body>
+</html>

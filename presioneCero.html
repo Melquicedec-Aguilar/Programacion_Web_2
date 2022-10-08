@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset='utf-8'>
+    <title>Presione Cero Para Finalizar El Ciclo While</title>
+
+</head>
+<body>
+    
+    <script>
+
+        //Creamos e inicializamos la variable de intentos
+        let num = parseInt(prompt("Ingresa cualquier número: "))
+        let intentos = 0
+
+        //Creamos el ciclo while
+        while (num != 0)
+        {
+            intentos += 1
+            num = parseInt(prompt("Ingresa otro número: "))
+        }
+
+        document.write("Se generaron " + intentos + " intentos para finalizar el ciclo while")
+
+    </script>
+
+</body>
+</html>

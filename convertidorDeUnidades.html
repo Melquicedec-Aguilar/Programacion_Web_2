@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset='utf-8'>
+    <title>Convertidor de Unidades</title>
+    
+</head>
+<body>
+    
+    <script>
+        //Mostramos en pantalla un menu
+        document.write("1. Metro a Centímetros" + '</br>')
+        document.write("2. Metro a pie" + '</br>')
+        document.write("3. Metro a yarda" + '</br>')
+        document.write("4. Metro a pulgada" + '</br>')
+        document.write("5. Metro a kilómetro" + '</br>')
+        document.write("6. Metro a milla" + '</br>')
+
+        //Variable de la condicion
+        let respuesta = true
+
+        while (respuesta == true)
+        {
+            //Creamos las variables
+            let opcion = prompt("Elige una operación: ")
+            let mtrs = parseFloat(prompt("Ingresa los metros: "))
+            let operacion = 0
+            let unidad = ""
+
+            switch(opcion)
+            {
+                case "1":
+                    operacion = mtrs * 100
+                    unidad = "cm"
+                    break
+
+                case "2":
+                    operacion = mtrs * 3.28084
+                    unidad = "pies"
+                    break
+
+                case "3":
+                    operacion = mtrs * 1.09361
+                    unidad = "yardas"
+                    break
+
+                case "4":
+                    operacion = mtrs * 39.3701
+                    unidad = "pulgadas"
+                    break
+
+                case "5":
+                    operacion = mtrs / 1000
+                    unidad = "Km"
+                    break
+                
+                case "6":
+                    operacion = mtrs / 1609
+                    unidad = "millas"
+                    break
+
+                default:
+                    window.alert("Selección no válida")
+
+            }
+
+            window.alert("El resultado de la conversión de " + mtrs + " m es de " + operacion + unidad)
+            
+            let op = prompt("¿Deseas realizar otra operación? ")
+            if ((op == "si") || (op == "Si") || (op == "SI")){
+                respuesta = true
+            }else{
+                respuesta = false
+            }
+
+        }
+        
+    </script>
+
+</body>
+</html>

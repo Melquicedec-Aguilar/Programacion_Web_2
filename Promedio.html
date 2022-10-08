@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Promedio</title>
+    <meta charset="utf-8">
+
+</head>
+
+<body>
+    <script>
+        //Creamos las variables
+        let primeraCal;
+        let segundaCal;
+        let terceraCal;
+        let cuartaCal;
+        let quintaCal;
+
+        //Solicitamos los datos
+        primeraCal = parseFloat(prompt("Ingresa la primera calificación: "))
+        segundaCal = parseFloat(prompt("Ingresa la segunda calificación: "))
+        terceraCal = parseFloat(prompt("Ingresa la tercer calificación: "))
+        cuartaCal = parseFloat(prompt("Ingresa la cuarta calificación: "))
+        quintaCal = parseFloat(prompt("Ingresa la quinta calificación: "))
+
+        //Hacemos los calculos
+        var promedio = (primeraCal+segundaCal+terceraCal+cuartaCal+quintaCal) / 5
+        
+        //Mostramos en pantalla
+        if (promedio >= 6.0)
+        {
+            document.write("Alumno Aprobado con calificación de: " + promedio)
+        }
+        else{
+            document.write("Alumno Reprobado con calificación de: " + promedio)
+        }
+    </script>
+</body>
+</html>

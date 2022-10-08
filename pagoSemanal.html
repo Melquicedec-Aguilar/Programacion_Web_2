@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset='utf-8'>
+    <title>Pago Semanal</title>
+
+</head>
+<body>
+
+    <script>
+        //Creamos las variables
+        let pagoPorHora;
+        let horasTabajadas;
+
+        //Solicitamos los datos
+        pagoPorHora = parseFloat(prompt("Ingrese el pago base por horas: "))
+        horasTabajadas = parseFloat(prompt("Ingrese las horas trabajadas: "))
+
+        //inicializamos variables para el pago
+        let pagoNormal = 0;
+        let pagoDOble = 0;
+        let pagoTriple = 0;
+        let pagoTotal = 0;
+        let restaHoras = 0
+
+        //Condicionales
+        if((horasTabajadas > 1) && (horasTabajadas <= 40)){
+            pagoNormal = horasTabajadas * pagoPorHora
+            document.write(horasTabajadas + " - (" + horasTabajadas + " horas pago normal)" + '</br>')
+            document.write("Su pago a realizar será de: $" + pagoNormal)
+
+        }else if ((horasTabajadas > 41) && (horasTabajadas <= 47)){
+            pagoNormal = 40 * pagoPorHora
+            restaHoras = horasTabajadas - 40
+            pagoDOble = restaHoras * (pagoPorHora*2)
+            pagoTotal = pagoNormal + pagoDOble
+            document.write(horasTabajadas + " - (40 horas pago normal y " + restaHoras + " horas pago doble)" + '</br>')
+            document.write("Su pago a realizar será de: $" + pagoTotal)
+
+        }else if (horasTabajadas >= 48){
+            pagoNormal = 40 * pagoPorHora
+            pagoDOble = 7 * (pagoPorHora*2)
+            restaHoras = horasTabajadas - 47
+            pagoTriple = restaHoras * (pagoPorHora*3)
+            pagoTotal = pagoNormal + pagoDOble + pagoTriple
+            document.write(horasTabajadas + " - (40 horas pago normal, 7 horas pago doble y " + restaHoras + " horas pago triple)" + '</br>')
+            document.write("Su pago a realizar será de: $" + pagoTotal)
+        }
+    </script>
+
+</body>
+</html>

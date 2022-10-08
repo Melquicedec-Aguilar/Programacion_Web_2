@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset='utf-8'>
+    <title>Calculadora Básica</title>
+    
+</head>
+<body>
+    
+    <script>
+        //Mostramos en pantalla un menu
+        document.write("1. Suma" + '</br>')
+        document.write("2. Resta" + '</br>')
+        document.write("3. Multiplicación" + '</br>')
+        document.write("4. División" + '</br>')
+        document.write("5. Potencia" + '</br>')
+
+        //Creamos la variable para el ciclo
+        let respuesta = true
+
+        while (respuesta == true)
+        {
+            //Creamos las variables dentro del bucle
+            let opcion = prompt("Elige una operación: ")
+            let num1 = parseFloat(prompt("Ingresa el valor del número 1: "))
+            let num2 = parseFloat(prompt("Ingresa el valor del número 2: "))
+            let operacion = 0
+
+            switch(opcion)
+            {
+                case "1":
+                    operacion = num1 + num2
+                    break
+
+                case "2":
+                    operacion = num1 - num2
+                    break
+
+                case "3":
+                    operacion = num1 * num2
+                    break
+
+                case "4":
+                    operacion = num1 / num2
+                    break
+
+                case "5":
+                    operacion = num1 ** num2
+                    break
+
+                default:
+                    window.alert("Selección no válida")
+
+            }
+
+            window.alert("El resultado de la operación elegida es: " + operacion)
+            
+            let op = prompt("¿Deseas realizar otra operación? ")
+            if ((op == "si") || (op == "Si") || (op == "SI")){
+                respuesta = true
+            }else{
+                respuesta = false
+            }
+        }
+
+    </script>
+
+</body>
+</html>
